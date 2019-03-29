@@ -1,0 +1,48 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cs-registry-service:8761/eureka/
+
+server:
+    port: 8502
+
+spring:
+   application:
+       name: cs-eseal-service
+   data:
+     mongodb:
+       uri: mongodb+srv://kweheliye:00008791@cluster0-no9ga.azure.mongodb.net/test?retryWrites=true
+       database: asm-cs-poc
+   cloud:
+     azure:
+       credential-file-path: my.azureauth
+       resource-group: asm-cs-qa-resource
+       region: West Europe
+       eventhub:
+         namespace: asm-cs-eventhub-namespace
+         checkpoint-storage-account: asmcsstorage
+     stream:
+       bindings:
+         inputParsedEvent:
+           destination: parsedevent-eventhub
+           group: eseal
+         inputMission:
+           destination: mission-eventhub
+           group: $Default
+
+#azure device url connection
+azureDeviceUrlConnection: 'HostName=asm-cs-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=eCfAzU+8nvwmWUiKxcoSY0sLLQga5ErARldTWFKtzmY='
+
+#call the eseal-service endpoint
+mission-service-base-url: 'http://cs-mission-service:8200'
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              index: OFF
