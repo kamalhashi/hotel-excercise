@@ -1,7 +1,7 @@
 package com.tripworld.hotel.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "room_amenities")
-@EqualsAndHashCode(callSuper = true)
+@Builder
 @Data
-public class RoomAmenities  extends AuditModel {
+public class RoomAmenities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "room_ame_id")

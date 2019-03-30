@@ -1,33 +1,30 @@
 package com.tripworld.hotel.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.math.BigDecimal;
-import java.util.Currency;
 
 
 @Entity
 @Table(name = "hotel_amenities")
-@EqualsAndHashCode(callSuper = true)
+@Builder
 @Data
-public class HotelAmenity extends AuditModel {
+public class HotelAmenity  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "hotel_ame_id")
+    @Column(unique = true, name = "hotel_ame_id")
     private Long hotelAmeId;
     private BigDecimal amount;
     private boolean chargeable;
 
     @ManyToOne
-    @JoinColumn(name = "hotel_id", insertable = false, updatable = false)
+    @JoinColumn(name = "hotel_id", nullable = false)
     private Hotel hotel;
 
     @ManyToOne
-    @JoinColumn(name = "amenity_id", insertable = false, updatable = false)
-    AmenityMst amenityMst;
+    @JoinColumn(name = "amenity_id",  nullable = false)
+    private AmenityMst amenityMst;
 
 }

@@ -2,21 +2,23 @@ package com.tripworld.hotel.domain;
 
 
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Objects;
-
+import java.util.Set;
 
 @Entity
 @Table(name = "hotels")
+@Builder
 @Data
-@EqualsAndHashCode(callSuper = true)
-public class Hotel extends AuditModel {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Hotel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true,name = "hotel_id")
@@ -33,10 +35,10 @@ public class Hotel extends AuditModel {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     //it’s a good practice to mark many-to-one side as the owning side.
     @JoinColumn(name = "hotel_id")
-    private List<Room> rooms;
+    private Set<Room> rooms;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "hotel_id")
-    private List<HotelAmenity> hotelAmenities;
+    private Set<HotelAmenity> hotelAmenities;
 
 }

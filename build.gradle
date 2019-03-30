@@ -23,6 +23,8 @@ dependencies {
 	//spring boot jars
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation("org.springframework.boot:spring-boot-starter-batch")
+
 	//mysql connecter jar and model mapper jars
 	implementation 'mysql:mysql-connector-java:8.0.15'
 	implementation 'org.modelmapper:modelmapper:2.3.2'

@@ -1,18 +1,20 @@
 package com.tripworld.hotel.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
+import java.util.Date;
 
 @Entity
 @Table(name = "amenity_mst")
 @Data
-@EqualsAndHashCode(callSuper = true)
-public class AmenityMst extends  AuditModel {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class AmenityMst {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +26,5 @@ public class AmenityMst extends  AuditModel {
     @NotNull
     @Size(max = 20)
     private String description;
+
 }

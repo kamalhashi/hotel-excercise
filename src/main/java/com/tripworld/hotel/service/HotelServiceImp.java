@@ -23,7 +23,7 @@ public class HotelServiceImp implements HotelService {
     ModelConverter modelConverter;
 
     @Override
-    @Transactional( propagation = Propagation.SUPPORTS,readOnly = true )
+    @Transactional(readOnly = true )
     public List<HotelResponseDto> findAll() {
         return this.hotelRepository.findAll()
                 .stream()
@@ -39,20 +39,21 @@ public class HotelServiceImp implements HotelService {
     }
 
     @Override
-    @Transactional( propagation = Propagation.SUPPORTS,readOnly = true )
+    @Transactional(readOnly = true )
     public Optional<HotelResponseDto> findHotelByHotelId(Long hotelId) {
         return this.hotelRepository.findById(hotelId)
                 .map(hotel -> this.modelConverter.convertToDto(hotel));
     }
 
     @Override
-    @Transactional( propagation = Propagation.SUPPORTS,readOnly = true )
+    @Transactional(readOnly = true )
     public Optional<HotelResponseDto> findByHotelName(String hotelName) {
         return this.hotelRepository.findOneByHotelName(hotelName)
                 .map(hotel -> this.modelConverter.convertToDto(hotel));
     }
 
     @Override
+    @Transactional( propagation = Propagation.REQUIRES_NEW)
     public void deleteHotel(Long hotelId) {
         this.hotelRepository.deleteById(hotelId);
     }

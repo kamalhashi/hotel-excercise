@@ -1,6 +1,7 @@
 package com.tripworld.hotel.domain;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -12,9 +13,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "rooms")
+@Builder
 @Data
-@EqualsAndHashCode(callSuper = true)
-public class Room extends AuditModel {
+public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true,name = "room_id")
