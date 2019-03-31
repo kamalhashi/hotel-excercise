@@ -88,8 +88,6 @@
    </ul> 
   </li>
   
-  <li>Tea</li>
-  <li>Milk</li>
 </ol>  
 
 **Pending items**
@@ -98,6 +96,7 @@
  This functionality can be improved by adding validation, checks and creating our own mapping by implementing LineMapper<T>.
 </li>
 <li>More unite cases and testing is needed </li>
+<li> JPA tuning by adding @NamedParameter and pagination </li>
 </ul>
 
 **Design consideration for better performance**
@@ -105,4 +104,4 @@
 1: Speedment: I will definitely try using Speedment , for more information please see this
  <a href="https://dzone.com/articles/the-need-for-speed-access-existing-data-1000x-fast">link </a> 
 
-2: Caching, pagination.
+2: JPA tuning: Caching, pagination, limit and skip, using fetch lazy instead of eager fetching (fetch=FetchType.LAZY), @NamedQuery
