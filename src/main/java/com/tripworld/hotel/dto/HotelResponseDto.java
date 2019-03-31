@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Builder
@@ -20,5 +21,5 @@ public class HotelResponseDto {
     private String hotelName;
     private String description;
     private String cityCode;
-    private List<Room> rooms;
+    private Set<Room> rooms;
 }

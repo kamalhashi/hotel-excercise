@@ -44,9 +44,7 @@ public class HotelRepositoryTest {
                 .cityCode("UAE")
                 .build();
 
-        entityManager.getEntityManager().getTransaction().begin();
         entityManager.persistAndFlush(hotel1);
-        entityManager.getEntityManager().getTransaction().commit();
 
 
         Optional<HotelResponseDto> found = hotelService.findByHotelName(hotel1.getHotelName());
@@ -148,7 +146,7 @@ public class HotelRepositoryTest {
 
         Room room2 = Room.builder()
                 .description("Double Room with amenity WIFI")
-                .roomAmenities(List.of(roomAmenities))
+                .roomAmenities(Set.of(roomAmenities))
                 .build();
 
         //CREATE HOTEL and assign hotel_Amenities and rooms

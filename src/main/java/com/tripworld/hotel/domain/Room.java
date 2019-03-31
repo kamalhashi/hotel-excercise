@@ -1,15 +1,11 @@
 package com.tripworld.hotel.domain;
 
 import lombok.*;
-import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
-import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "rooms")
@@ -29,6 +25,6 @@ public class Room {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "room_id")
-    private List<RoomAmenities> roomAmenities;
+    private Set<RoomAmenities> roomAmenities;
 
 }

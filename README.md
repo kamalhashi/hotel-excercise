@@ -2,7 +2,28 @@
 
 1: IDEA: to run Intellij or eclipse you would need to import the project as gradle and run it 
 2: Gradle: the project uses gradle is building tool, you can use gradle commands to run the project 
-{gradle clean build} {gradle }
+{gradle clean build} {gradle bootRun}
+
+**Using Post man**
+<ol type="1">
+  <li>Post Method
+   <ul>
+      <li> Create only hotel without rooms and amenities</li>
+      
+        {
+        	"hotelName" : "Juba Hotel 11",
+        	"description": "Located in Jumairah",
+        	"cityCode": "W04"
+        }
+            
+   </ul>
+ 
+  
+  </li>
+  
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>  
 
 **Pending items**
 <ul>
