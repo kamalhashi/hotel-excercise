@@ -37,15 +37,55 @@
        <li> Create only hotel without rooms and with room amenities</li>
           
             {
-            	"hotelName" : "Juba Hotel 11",
-            	"description": "Located in Jumairah",
-            	"cityCode": "W04",
-            	"rooms" : [
-            		{"description" : "Big room with double bed"}
-            	]
+                "hotelName": "Juba Hotel 14",
+                "description": "Located in Jumairah",
+                "cityCode": "W04",
+                "rooms": [
+                    {
+                        "description": "Big room with double bed",
+                        "roomAmenities": [
+                            {
+                                "amount": 87,
+                                "chargeable": true,
+                                "amenityMst": {"amenityId": 1}
+                            }
+                        ]
+                    }
+                ]
             }
-    </ul>
-  
+   </ul>
+    
+   <ul>
+          <li> Create hotel with hotelAmenities and with rooms and with RoomAmenities</li>
+             
+               {
+                   "hotelName": "Juba Hotel 18",
+                   "description": "Located in Jumairah",
+                   "cityCode": "W04",
+                   "hotelAmenities": [
+                       {
+                           "description": "Swimming pool",
+                           "amenityMst": {
+                               "amenityId": 1
+                           }
+                       }
+                   ],
+                   "rooms": [
+                       {
+                           "description": "Big room with double bed",
+                           "roomAmenities": [
+                               {
+                                   "amount": 87,
+                                   "chargeable": true,
+                                   "amenityMst": {
+                                       "amenityId": 1
+                                   }
+                               }
+                           ]
+                       }
+                   ]
+               }
+   </ul> 
   </li>
   
   <li>Tea</li>

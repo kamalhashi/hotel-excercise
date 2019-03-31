@@ -1,5 +1,6 @@
 package com.tripworld.hotel.dto;
 
+import com.tripworld.hotel.domain.HotelAmenity;
 import com.tripworld.hotel.domain.Room;
 import lombok.Data;
 import javax.validation.constraints.NotBlank;
@@ -18,4 +19,7 @@ public class CreateHotelDto {
     private String cityCode;
     //can be empty
     private Set<Room> rooms;
+    //can be empty
+    private Set<HotelAmenity> hotelAmenities;
+
 }
