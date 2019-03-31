@@ -9,7 +9,6 @@
   <li>Post Method
    <ul>
       <li> Create only hotel without rooms and amenities</li>
-      
         {
         	"hotelName" : "Juba Hotel 11",
         	"description": "Located in Jumairah",
