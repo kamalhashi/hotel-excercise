@@ -15,9 +15,36 @@
         	"description": "Located in Jumairah",
         	"cityCode": "W04"
         }
-            
+   </ul>
+   
+   <ul>
+      <li> Create only hotel without rooms and without amenities</li>
+         
+           {
+               "hotelName": "Juba Hotel 12",
+               "description": "Located in Jumairah",
+               "cityCode": "W04",
+               "rooms": [
+                   {
+                       "description": "Big room with double bed"
+                   }
+                   
+               ]
+           }
    </ul>
  
+  <ul>
+       <li> Create only hotel without rooms and with room amenities</li>
+          
+            {
+            	"hotelName" : "Juba Hotel 11",
+            	"description": "Located in Jumairah",
+            	"cityCode": "W04",
+            	"rooms" : [
+            		{"description" : "Big room with double bed"}
+            	]
+            }
+    </ul>
   
   </li>
   

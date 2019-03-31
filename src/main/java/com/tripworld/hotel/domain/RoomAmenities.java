@@ -11,6 +11,8 @@ import java.math.BigDecimal;
 @Table(name = "room_amenities")
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class RoomAmenities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

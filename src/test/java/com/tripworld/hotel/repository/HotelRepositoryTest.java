@@ -87,11 +87,8 @@ public class HotelRepositoryTest {
     public void should_createHotel_WithRooms_WithHotelAmneties() {
 
 
-        AmenityMst amenityMst = new AmenityMst();
-        amenityMst= entityManager.find(AmenityMst.class, 1L);
-
         HotelAmenity hotelAmenity = HotelAmenity.builder()
-                .amenityMst(amenityMst)
+                .amenityMst(AmenityMst.builder().amenityId(1L).build())
                 .chargeable(false)
                 .build();
 
@@ -122,18 +119,17 @@ public class HotelRepositoryTest {
          * Fetch one of the rows in amenity_mst table and assigned to hotel
          */
 
-        AmenityMst amenityMst=  entityManager.find(AmenityMst.class, 1L);
 
         //Create hotel and assign amenity_mst to that hotel.
         HotelAmenity hotelAmenity =  HotelAmenity.builder()
-                .amenityMst(amenityMst)
+                .amenityMst(AmenityMst.builder().amenityId(1L).build())
                 .chargeable(true)
                 .amount(new BigDecimal(34.5))
                 .build();
 
         //Create Room amenity
         RoomAmenities roomAmenities = RoomAmenities.builder()
-                .amenityMst(amenityMst)
+                .amenityMst(AmenityMst.builder().amenityId(1L).build())
                 .chargeable(true)
                 .amount(new BigDecimal(34.5))
                 .build();

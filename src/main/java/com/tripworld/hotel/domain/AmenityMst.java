@@ -6,6 +6,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
@@ -14,7 +15,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AmenityMst {
+public class AmenityMst implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
