@@ -1,9 +1,12 @@
 **How to run the Program**
+<ol type="1">
 
-1: IDEA: to run Intellij or eclipse you would need to import the project as gradle and run it 
-2: Gradle: the project uses gradle is building tool, you can use gradle commands to run the project 
+<li> IDEA: to run Intellij or eclipse you would need to import the project as gradle and run it 
+</li>
+<li>  Gradle: the project uses gradle is building tool, you can use gradle commands to run the project 
 {gradle clean build} {gradle bootRun}
-
+</li>
+</ol>
 **Using Post man**
 <ol type="1">
   <li>Post Method
