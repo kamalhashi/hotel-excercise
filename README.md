@@ -22,7 +22,7 @@
    </ul>
    
    <ul>
-      <li> Create hotel without rooms and without-amenities</li>
+      <li> Create hotel with-rooms and without-amenities</li>
          
            {
                "hotelName": "Juba Hotel 12",
