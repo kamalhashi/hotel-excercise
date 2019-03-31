@@ -8,16 +8,18 @@
 <ol type="1">
   <li>Post Method
    <ul>
-      <li> Create only hotel without rooms and amenities</li>
-        {
-        	"hotelName" : "Juba Hotel 11",
-        	"description": "Located in Jumairah",
-        	"cityCode": "W04"
-        }
+      <li> Create only hotel without-rooms and without-amenities</li>
+
+            {
+               "hotelName": "Juba Hotel 12",
+               "description": "Located in Jumairah",
+                "cityCode": "W04",
+                           
+            }
    </ul>
    
    <ul>
-      <li> Create only hotel without rooms and without amenities</li>
+      <li> Create hotel without rooms and without-amenities</li>
          
            {
                "hotelName": "Juba Hotel 12",
@@ -33,7 +35,7 @@
    </ul>
  
   <ul>
-       <li> Create only hotel without rooms and with room amenities</li>
+       <li> Create hotel with-rooms and with room-amenities</li>
           
             {
                 "hotelName": "Juba Hotel 14",
