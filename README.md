@@ -1,9 +1,9 @@
 **How to run the Program**
 <ol type="1">
 
-<li> IDEA: to run Intellij or eclipse you would need to import the project as gradle and run it 
+<li> IDE: to run the program in  Intellij or Eclipse you would need to import the project as gradle and run it 
 </li>
-<li>  Gradle: the project uses gradle is building tool, you can use gradle commands to run the project 
+<li>  Gradle: the project uses gradle as building tool, you can use gradle commands to run the project 
 {gradle clean build} {gradle bootRun}
 </li>
 </ol>

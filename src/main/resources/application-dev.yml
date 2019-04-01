@@ -10,12 +10,13 @@ spring:
      url: jdbc:mysql://localhost:3306/trip-world
      username: weheliye
      password: weheliye
+     initialization-mode: always
      jpa:
        properties:
          hibernate:
            dialec: org.hibernate.dialect.MySQL5InnoDBDialect
-       hibernate.ddl-auto: create-drop
-       generate-ddl: true
+           naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+       hibernate.ddl-auto: none
        show-sql: true
    batch:
      initialize-schema: always
