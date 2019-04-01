@@ -6,7 +6,9 @@
 <li>  Gradle: the project uses gradle as building tool, you can use gradle commands to run the project 
 {gradle clean build} {gradle bootRun}
 </li>
+<li> Added schema.sql: to  initialize the database with amenities.</li>
 </ol>
+
 **Using Post man**
 <ol type="1">
   <li>Post Method
